@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_planetario/routes/routesName.dart';
 import 'package:flutter_app_planetario/routes/routesPages.dart';
+
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() => runApp(const MyApp());
