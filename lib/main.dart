@@ -12,12 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'My Flutter App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      initialRoute: RoutesName.LOGIN,
+      initialRoute: RoutesName.INICIAL,
       getPages: RoutesPage.pages,
     );
   }

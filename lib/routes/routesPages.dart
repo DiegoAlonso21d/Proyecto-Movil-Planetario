@@ -6,6 +6,10 @@ import 'package:get/get.dart';
 class RoutesPage {
   static final List<GetPage> pages = [
     GetPage(
+      name: RoutesName.INICIAL,
+      page: () => SplashScreen(),
+    ),
+    GetPage(
       name: RoutesName.LOGIN,
       page: () => LoginScreen(),
     ),
