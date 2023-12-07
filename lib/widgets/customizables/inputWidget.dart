@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class InputWidget extends StatelessWidget {
-  final String placeholder;
+  final String? placeholder; // Cambiado a String opcional
   final Color backgroundColor;
   final BorderRadius borderRadius;
   final IconData? leftIcon;
@@ -17,12 +17,14 @@ class InputWidget extends StatelessWidget {
   final double? heightIconContainer;
 
   final double? marginIcon;
+  final double? borderWidth; // Nuevo parámetro para el ancho del borde
+  final Color? borderColor; // Nuevo parámetro para el color del borde
 
   final TextEditingController? textController;
 
   const InputWidget({
     Key? key,
-    required this.placeholder,
+    this.placeholder = "", // Asignado un valor por defecto
     required this.width,
     required this.height,
     this.backgroundColor = Colors.grey,
@@ -36,6 +38,8 @@ class InputWidget extends StatelessWidget {
     this.widthIconContainer,
     this.heightIconContainer,
     this.marginIcon,
+    this.borderWidth, // Nuevo parámetro
+    this.borderColor, // Nuevo parámetro
     this.textController,
   }) : super(key: key);
 
@@ -47,6 +51,10 @@ class InputWidget extends StatelessWidget {
       decoration: BoxDecoration(
         color: backgroundColor,
         borderRadius: borderRadius,
+        border: Border.all(
+          width: borderWidth ?? 0.0,
+          color: borderColor ?? Colors.black, // Color por defecto es negro
+        ),
       ),
       padding: EdgeInsets.all(marginIcon ?? 0),
       child: Row(
