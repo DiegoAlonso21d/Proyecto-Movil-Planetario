@@ -17,9 +17,9 @@ class SplashScreen extends StatelessWidget {
         splash: ZoomIn(
           duration: Duration(milliseconds: 1000),
           delay: Duration(milliseconds: 0),
-          from: 1.8,
+          from: 1.4,
           child: Image(
-              image: AssetImage("../assets/logoApp/letraYLogoFondoOscuro.png")),
+              image: AssetImage("assets/logoApp/letraYLogoFondoOscuro.png")),
         ),
         nextScreen: LoginScreen(),
         splashTransition: SplashTransition.fadeTransition,

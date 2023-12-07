@@ -22,6 +22,8 @@ class ButtonWidget extends StatelessWidget {
 
   final double? fontSizeText;
 
+  final bool underline;
+
   final void Function()? ontap;
 
   const ButtonWidget({
@@ -42,6 +44,7 @@ class ButtonWidget extends StatelessWidget {
     this.colorBorder,
     this.widthBorder,
     this.fontSizeText,
+    required this.underline,
   });
 
   @override
@@ -67,6 +70,9 @@ class ButtonWidget extends StatelessWidget {
         child: Text(
           textoButton,
           style: TextStyle(
+              decorationStyle: TextDecorationStyle.solid,
+              decoration:
+                  underline ? TextDecoration.underline : TextDecoration.none,
               fontSize: fontSizeText ?? 15,
               color: colorTextButton,
               fontWeight: isFontBold ? FontWeight.bold : FontWeight.normal),
