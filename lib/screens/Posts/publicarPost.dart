@@ -41,6 +41,7 @@ class PublicarPost extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(10),
               child: ButtonWidget(
+                underline: false,
                 textoButton: "Seleccionar imagen",
                 isFontBold: true,
                 widthButton: width * 1,
@@ -81,7 +82,7 @@ class PublicarPost extends StatelessWidget {
                 borderColor: Colors.black,
               ),
             ),
-             Padding(
+            Padding(
               padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 10),
               child: Container(
                 width: width * 1,
@@ -99,18 +100,19 @@ class PublicarPost extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(10),
               child: TextAreaPrueba(
-                  hintText: 'Escribe algo sobre tu publicación',
-                  borderWidth: 1,
-                  borderColor: Colors.black,
-                  borderRadius: BorderRadius.circular(12.0),
-                  width: width*1,
-                  height: height*0.1,
-                  controller: TextEditingController(),
-                ),
+                hintText: 'Escribe algo sobre tu publicación',
+                borderWidth: 1,
+                borderColor: Colors.black,
+                borderRadius: BorderRadius.circular(12.0),
+                width: width * 1,
+                height: height * 0.1,
+                controller: TextEditingController(),
+              ),
             ),
             Padding(
               padding: const EdgeInsets.all(10),
               child: ButtonWidget(
+                underline: false,
                 textoButton: "Publicar",
                 isFontBold: true,
                 widthButton: width * 1,
