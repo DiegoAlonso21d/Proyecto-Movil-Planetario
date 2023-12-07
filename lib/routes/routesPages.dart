@@ -13,5 +13,9 @@ class RoutesPage {
       name: RoutesName.REGISTER,
       page: () => RegisterScreen(),
     ),
+    GetPage(
+      name: RoutesName.POST,
+      page: () => PublicarPost(),
+    ),
   ];
 }

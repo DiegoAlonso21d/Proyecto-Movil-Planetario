@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      initialRoute: RoutesName.LOGIN,
+      initialRoute: RoutesName.POST,
       getPages: RoutesPage.pages,
     );
   }
