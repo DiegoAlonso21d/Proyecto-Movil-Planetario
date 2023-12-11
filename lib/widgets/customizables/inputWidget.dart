@@ -20,6 +20,8 @@ class InputWidget extends StatelessWidget {
   final double? borderWidth; // Nuevo parámetro para el ancho del borde
   final Color? borderColor; // Nuevo parámetro para el color del borde
 
+  final bool isFontBold;
+
   final TextEditingController? textController;
 
   const InputWidget({
@@ -41,6 +43,7 @@ class InputWidget extends StatelessWidget {
     this.borderWidth, // Nuevo parámetro
     this.borderColor, // Nuevo parámetro
     this.textController,
+    required this.isFontBold,
   }) : super(key: key);
 
   @override
@@ -84,7 +87,8 @@ class InputWidget extends StatelessWidget {
               textAlign: TextAlign.left,
               keyboardType: inputType,
               obscureText: isPassword,
-              style: TextStyle(fontWeight: FontWeight.w900),
+              style: TextStyle(
+                  fontWeight: isFontBold ? FontWeight.w900 : FontWeight.normal),
               decoration: InputDecoration(
                 hintText: placeholder,
                 hintStyle: TextStyle(color: Colors.black),

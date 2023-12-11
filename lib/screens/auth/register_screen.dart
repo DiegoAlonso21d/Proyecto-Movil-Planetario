@@ -23,11 +23,19 @@ class RegisterScreen extends StatelessWidget {
                   children: [
                     _Logo(width: width, height: height),
                     _FormInicioSesion(height: height, width: width),
+
+                    SizedBox(
+                      height: height * 0.05,
+                    ),
                     TextoWidget(
-                        texto: "Iniciar con :",
+                        texto: "Registrarase con :",
                         textColor: Colors.white,
                         fontSize: width * 0.045,
                         fontBold: true),
+
+                    SizedBox(
+                      height: height * 0.03,
+                    ),
 
                     //Inicio con redes
                     _IniciarConRedes(width: width)
@@ -125,6 +133,7 @@ class _InputTelefono extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InputWidget(
+        isFontBold: true,
         inputType: TextInputType.number,
         sizeIcon: width * 0.06,
         widthIconContainer: width * 0.12,
@@ -152,6 +161,7 @@ class _InputNombres extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InputWidget(
+        isFontBold: true,
         sizeIcon: width * 0.06,
         widthIconContainer: width * 0.12,
         marginIcon: width * 0.01,
@@ -234,6 +244,7 @@ class _InputPassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InputWidget(
+        isFontBold: true,
         isPassword: true,
         sizeIcon: width * 0.06,
         widthIconContainer: width * 0.12,
@@ -261,6 +272,7 @@ class _InputEmail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InputWidget(
+        isFontBold: true,
         sizeIcon: width * 0.06,
         widthIconContainer: width * 0.12,
         marginIcon: width * 0.01,

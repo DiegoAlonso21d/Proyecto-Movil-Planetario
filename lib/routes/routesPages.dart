@@ -10,6 +10,10 @@ class RoutesPage {
       page: () => SplashScreen(),
     ),
     GetPage(
+      name: RoutesName.HOME,
+      page: () => HomeScreen(),
+    ),
+    GetPage(
       name: RoutesName.LOGIN,
       page: () => LoginScreen(),
     ),
@@ -19,7 +23,7 @@ class RoutesPage {
     ),
     GetPage(
       name: RoutesName.POST,
-      page: () => PublicarPost(),
+      page: () => PublicarPostScreen(),
     ),
   ];
 }

@@ -23,12 +23,18 @@ class LoginScreen extends StatelessWidget {
                   children: [
                     _Logo(width: width, height: height),
                     _FormInicioSesion(height: height, width: width),
+
+                    SizedBox(
+                      height: height * 0.05,
+                    ),
                     TextoWidget(
                         texto: "Iniciar con :",
                         textColor: Colors.white,
                         fontSize: width * 0.045,
                         fontBold: true),
-
+                    SizedBox(
+                      height: height * 0.03,
+                    ),
                     //Inicio con redes
                     _IniciarConRedes(width: width)
                   ]),
@@ -125,6 +131,7 @@ class _BtnIniciarSesion extends StatelessWidget {
     return ButtonWidget(
       ontap: () {
         print("Inicias sesion");
+        Get.toNamed(RoutesName.HOME);
       },
       underline: false,
       backgroundColorButton: Colors.white,
@@ -179,6 +186,7 @@ class _InputPassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InputWidget(
+        isFontBold: true,
         isPassword: true,
         sizeIcon: width * 0.06,
         widthIconContainer: width * 0.12,
@@ -206,6 +214,7 @@ class _InputEmail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InputWidget(
+        isFontBold: true,
         sizeIcon: width * 0.06,
         widthIconContainer: width * 0.12,
         marginIcon: width * 0.01,
