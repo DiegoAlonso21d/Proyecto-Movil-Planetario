@@ -9,6 +9,7 @@ class PrincipalAppBarWidget extends StatelessWidget {
   final String imageLogo;
   final double widthOpciones;
   final List<Widget> listaOpciones;
+  final void Function()? logoOntap;
 
   const PrincipalAppBarWidget(
       {super.key,
@@ -19,7 +20,8 @@ class PrincipalAppBarWidget extends StatelessWidget {
       required this.heightLogo,
       required this.imageLogo,
       required this.widthOpciones,
-      required this.listaOpciones});
+      required this.listaOpciones,
+      this.logoOntap});
 
   @override
   Widget build(BuildContext context) {
@@ -42,10 +44,13 @@ class PrincipalAppBarWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Image(
-              width: widthLogo,
-              height: heightLogo,
-              image: AssetImage(imageLogo)),
+          GestureDetector(
+            onTap: logoOntap,
+            child: Image(
+                width: widthLogo,
+                height: heightLogo,
+                image: AssetImage(imageLogo)),
+          ),
           Container(
             width: widthOpciones,
             child: Row(

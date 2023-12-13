@@ -25,5 +25,13 @@ class RoutesPage {
       name: RoutesName.POST,
       page: () => PublicarPostScreen(),
     ),
+    GetPage(
+      name: RoutesName.NOTIFICATIONS,
+      page: () => NotificationScreen(),
+    ),
+    GetPage(
+      name: RoutesName.SEARCH,
+      page: () => SearchScreen(),
+    ),
   ];
 }
